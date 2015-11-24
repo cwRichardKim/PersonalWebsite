@@ -108,8 +108,8 @@ body {
 }
 
 .intro-container-right-anim {
-  -ms-transform: translate(0px,-40px); /* IE 9 */
-  -webkit-transform: translate(0px,-40px); /* Safari */
+  -ms-transform: translate(0px,-40px);
+  -webkit-transform: translate(0px,-40px);
   transform: translate(0px,-40px);
   opacity: 1;
 }
@@ -121,6 +121,11 @@ body {
   top: 50%;
   transform: translateY(-50%);
   color: white;
+}
+
+.intro-content div {
+  -webkit-transform: translateZ(0px); /* fixes safari text flicker */
+  -moz-osx-font-smoothing: grayscale; /* fixes moz text flicker */
 }
 
 .header-container {
