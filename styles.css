@@ -231,13 +231,11 @@ body {
   height: auto;
   min-height: 100px;
   margin-bottom: 100px;
-  background-color: #DDDFFF;
 }
 
 .timeline .downwards_curved_triangle {
   line-height: 10px;
   margin-left: calc(34.6% - 73px);
-  background-color: #FFFDDD;
 }
 
 .timeline .timeline_vert_line {
