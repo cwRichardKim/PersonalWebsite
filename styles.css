@@ -49,7 +49,7 @@ table {
   border-spacing: 0;
 }
 
-/* normalizing end */
+/* normalizing end -----------------------------------------------------------*/
 
 body {
   font-family: sans-serif;
@@ -202,7 +202,7 @@ body {
   opacity: 1 !important;
 }
 
-/* cover page (top container) end */
+/* cover page (top container) end --------------------------------------------*/
 
 /* timeline start */
 
@@ -230,7 +230,7 @@ body {
   width: 100%;
   height: auto;
   min-height: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 .timeline .downwards_curved_triangle {
@@ -303,7 +303,98 @@ body {
   max-width: 600px;
 }
 
+/* timeline end --------------------------------------------------------------*/
+
+/* project highlights start */
+
+.project_highlights h1 {
+  font-family: 'Hind', sans-serif;
+  letter-spacing: 1.8px;
+  font-size: 30px;
+  font-weight: 500;
+  color: #4A4A4A;
+  text-align: center;
+}
+
+.project_highlights h2 {
+  font-family: 'Hind', sans-serif;
+  letter-spacing: 2.24px;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #4A4A4A;
+}
+
+.project_highlights a  {
+  font-family: 'Hind', sans-serif;
+  letter-spacing: 1.55px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #77BAD8;
+  text-decoration: none;
+}
+
+.project_highlights a:hover {
+  text-decoration: underline;
+}
+
+.project_highlights p {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-style: italic;
+  color: #9B9B9B;
+  line-height: 25px;
+  margin-top: 20px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.project_highlights {
+  width: 100%;
+}
+
+.project_highlights .title_underline {
+  width: 170px;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: #4A4A4A;
+  margin: 10px auto;
+}
+
+.project_highlights .project_instance {
+  margin-top: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project_highlights .project_photo {
+  width: calc(50% - 80px);
+  text-align: right;
+  padding-left: 50px;
+}
+
+.project_highlights .project_img {
+  height: auto;
+  max-width: 100%;
+}
+
+.project_highlights .project_text_container {
+  width: calc(50% - 30px);
+  height: 100%;
+  text-align: left;
+}
+
+.project_highlights .project_text {
+  background-color: blue;
+  width: auto;
+}
+
+/* project highlights end ----------------------------------------------------*/
+
+
+/* HALF SCREEN */
 @media screen and (max-width:720px) {
+  /* timeline half screen */
   .timeline .downwards_curved_triangle {
     margin-left: -30px;
   }
@@ -327,16 +418,18 @@ body {
     margin-top: 20px;
     width: calc(100% - 100px);
   }
+  /** timeline half screen end **/
 }
 
-/* timeline end */
 
-/* mobile */
+/* MOBILE */
 @media only screen and (max-device-width: 480px) and (orientation: portrait) {
+  /* top container mobile */
   .top-container .intro-container-right {
     width: 100%;
     padding-left: 20px;
     padding-right: 0px;
     min-width: 330px;
   }
+  /** top container mobile end **/
 }
