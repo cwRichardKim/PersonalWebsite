@@ -51,9 +51,33 @@ table {
 
 /* normalizing end -----------------------------------------------------------*/
 
+/* standards */
+
 body {
   font-family: sans-serif;
 }
+
+.border_button {
+  margin-top: 30px;
+  padding: 13px 15px 15px 15px;
+  max-width: 210px;
+  width: 70%;
+  border: 2px solid #77BAD8;
+  color: #77BAD8;
+  text-align: center;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  transition: .3s;
+  border-radius: 4px;
+}
+
+a {
+  text-decoration: none;
+  color: #77BAD8;
+}
+
+/* standards end -------------------------------------------------------------*/
 
 /* cover page (top container) start */
 
@@ -321,20 +345,20 @@ body {
   letter-spacing: 2.24px;
   font-size: 30px;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-bottom:5px;
   color: #4A4A4A;
 }
 
-.project_highlights a  {
+.project_highlights .link {
   font-family: 'Hind', sans-serif;
   letter-spacing: 1.55px;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 400;
   color: #77BAD8;
   text-decoration: none;
 }
 
-.project_highlights a:hover {
+.project_highlights .link:hover {
   text-decoration: underline;
 }
 
@@ -350,6 +374,7 @@ body {
 
 .project_highlights {
   width: 100%;
+  margin-bottom: 100px;
 }
 
 .project_highlights .title_underline {
@@ -384,10 +409,29 @@ body {
   text-align: left;
 }
 
-.project_highlights .project_text {
-  background-color: blue;
-  width: auto;
+.project_highlights .appstore_badge {
+  margin-top: 20px;
 }
+
+.project_highlights .larger_button {
+  width: 250px;
+  padding: 18px 20px 20px 20px;
+  margin-left: calc(50% - 125px);
+  margin-top: 130px;
+ }
+
+ .project_highlights .button_subtext {
+   max-width: 100%;
+   text-align: center;
+   width: 100%;
+   display: table;
+   margin: 0 auto;
+ }
+
+ .project_highlights .button_subtext_container {
+  margin-top: 20px;
+   width: 100%;
+ }
 
 /* project highlights end ----------------------------------------------------*/
 
@@ -419,6 +463,39 @@ body {
     width: calc(100% - 100px);
   }
   /** timeline half screen end **/
+  /* project highlights half screen */
+  .project_highlights .project_instance {
+    display: block;
+    width: 100%;
+  }
+
+  .project_highlights .project_photo {
+    text-align: center;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .project_highlights .project_text_container {
+    width: 70%;
+    height: auto;
+    text-align: left;
+    margin: 50px 0px 0px 15%;
+  }
+
+  .project_highlights p {
+    width: 100%;
+  }
+
+  .project_highlights .project_img {
+    max-width: 80%;
+  }
+
+  .project_highlights .button_subtext {
+    width: 80%;
+    max-width: 500px;
+  }
+  /** project highlights half screen end **/
 }
 
 
@@ -432,4 +509,9 @@ body {
     min-width: 330px;
   }
   /** top container mobile end **/
+  /* project highlights mobile */
+  .project_highlights .project_instance {
+    margin-top: 100px;
+  }
+  /** project highlights mobile end **/
 }
