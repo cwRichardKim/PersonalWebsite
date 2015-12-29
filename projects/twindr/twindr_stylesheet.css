@@ -222,7 +222,6 @@ a {
 
 .project_description p {
   font-family: 'Helvetica Neue', sans-serif;
-  font-style: italic;
   color: #9B9B9B;
   line-height: 25px;
   margin-top: 20px;
@@ -265,6 +264,8 @@ a {
 
 .project_description .project_text_container {
   width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
   margin: 35px auto;
   padding-left: 15px;
 }
