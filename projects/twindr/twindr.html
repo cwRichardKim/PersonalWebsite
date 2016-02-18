@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <link href='https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat|Hind:400,500,600' rel='stylesheet' type='text/css'>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <link rel="shortcut icon" href="favicon.ico" />
 
   <title>Richard Kim (cwRichardKim)</title>
@@ -28,11 +27,18 @@
   </script>
 
   <script type="text/javascript">
-    function fadeIn() {
-      $(".intro-container-right").addClass('intro-container-right-anim');
-      $(".background-image").addClass('background-image-anim');
+    window.onload = function () {
+      function fadeIn(className, animName) {
+        var els = document.getElementsByClassName(className);
+        if (els && els.length > 0) {
+          el = els[0]
+          if (el)
+            el.classList.add(animName);
+        }
+      }
+      fadeIn("intro-container-right", "intro-container-right-anim");
+      fadeIn("background-image", "background-image-anim");
     }
-    window.onload = fadeIn;
   </script>
 </head>
 
