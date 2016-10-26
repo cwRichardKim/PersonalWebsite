@@ -1,46 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <link href='https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat|Hind:400,500,600' rel='stylesheet' type='text/css'>
-  <link rel="shortcut icon" href="assets/favicon.ico" />
-
-  <title>Richard Kim (cwRichardKim)</title>
-  <meta name="description" content="Portfolio for cwRichardKim (Choong-Won Richard Kim). Tufts, Github, blog, contact, email, resume, projects, developer ios">
-  <meta name="author" content="cwRichardKim (Choong-Won Richard Kim)">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
-
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  <meta name="google-site-verification" content="9KZyJ3LTeIe9PP4onucbOegmckaRXMt7n1Ff4lh37aM">
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-70637134-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
-
-  <script type="text/javascript">
-    window.onload = function () {
-      function fadeIn(className, animName) {
-        var els = document.getElementsByClassName(className);
-        if (els && els.length > 0) {
-          el = els[0]
-          if (el)
-            el.classList.add(animName);
-        }
-      }
-      fadeIn("intro-container-right", "intro-container-right-anim");
-      fadeIn("background-image", "background-image-anim");
-    }
-  </script>
-</head>
+---
+layout: default
+title: Richard Kim (cwRichardKim)
+---
 
 <body>
   <div class="top-container">
@@ -100,145 +61,75 @@
     <div class="timeline_vert_line"></div>
 
     <div class="jobs_container">
+      {% for job in site.jobs reversed %}
 
-      <div class="job_instance">
-        <div class="job_marker_outer"><div class="job_marker_inner"></div></div>
-        <div class="job_content">
-          <div class="info_left">
-            <h1 class="blue_text">Google</h1>
-            <p>Jun 2016 - current</p>
-          </div>
-          <div class="info_right">
-            <h1>Software Engineering Intern</h1>
-            <p>Building software on the Google Fiber Data Analytics team.</p>
-          </div>
-          <div class="spacer" style="clear: both;"></div>
-        </div>
-      </div>
+        {% if job == site.jobs.first %}
+        <div class="job_instance last_job">
+          <div class="timeline_vert_line"></div>
+        {% else %}
+        <div class="job_instance">
+        {% endif %}
 
-      <div class="job_instance">
-        <div class="job_marker_outer"><div class="job_marker_inner"></div></div>
-        <div class="job_content">
-          <div class="info_left">
-            <h1 class="blue_text">Pay With Privacy</h1>
-            <p>May 2016 - Jun 2016<br>(1 month)</p>
+          <div class="job_marker_outer"><div class="job_marker_inner"></div></div>
+          <div class="job_content">
+            <div class="info_left">
+              <h1 class="blue_text">{{job.company}}</h1>
+              <p>{{job.time}}{% if job.duration %}<br>({{job.duration}}){% endif %}</p>
+            </div>
+            <div class="info_right">
+              <h1>{{job.position}}</h1>
+              <p>{{job.content}}</p>
+            </div>
+            <div class="spacer" style="clear: both;"></div>
           </div>
-          <div class="info_right">
-            <h1>Mobile Engineering Intern</h1>
-            <p>Worked on small features and bug fixes on the <a href="https://itunes.apple.com/us/app/privacy.com-forget-your-credit/id1040298266?mt=8">Privacy app</a> (written in <a href="https://facebook.github.io/react-native/">React Native</a>).  I fell in love with the idea behind <a href="http://privacy.com">privacy.com</a> and wanted to contribute something before my summer at Google.  I intend to continue a part-time position after the summer.</p>
-          </div>
-          <div class="spacer" style="clear: both;"></div>
         </div>
-      </div>
-
-      <div class="job_instance">
-        <div class="job_marker_outer"><div class="job_marker_inner"></div></div>
-        <div class="job_content">
-          <div class="info_left">
-            <h1 class="blue_text">Drift</h1>
-            <p>Mar 2015 - Nov 2015<br>(9 months)</p>
-          </div>
-          <div class="info_right">
-            <h1>Software Engineering Intern</h1>
-            <p>Built core components of the <a href="https://annotate.driftt.com/annotate">Annotate iOS and OSX apps</a> (#2 productivity iOS app) that focused on performantly applying and editing graphical elements on to images.  Also built resources to increase 7-day retention by %200 and added Zendesk API integration to upload annotated screenshots to Zendesk tickets.</p>
-          </div>
-          <div class="spacer" style="clear: both;"></div>
-        </div>
-      </div>
-
-      <div class="job_instance">
-        <div class="job_marker_outer"><div class="job_marker_inner"></div></div>
-        <div class="job_content">
-          <div class="info_left">
-            <h1 class="blue_text">Evoqe LLC.</h1>
-            <p>Nov 2013 - Feb 2015<br>(16 months)</p>
-          </div>
-          <div class="info_right">
-            <h1>Co-Founder, Lead Developer, UI/UX Designer</h1>
-            <p>Co-founded the “college social life on an app” with 3 friends. Within 6 months we grew to 75% of all iPhone users at Tufts University.  I spent over 4,000 hours writing around 40,000 lines of code that span over 2 iOS apps, a JavaScript backend, and a website.  I also designed the UI / UX of all versions of the app (V1.0 - V3.2) and designed the strategic growth of the product using analytics and periodic feature assessments.</p>
-          </div>
-          <div class="spacer" style="clear: both;"></div>
-        </div>
-      </div>
-
-      <div class="job_instance last_job">
-        <div class="timeline_vert_line"></div>
-        <div class="job_marker_outer"><div class="job_marker_inner"></div></div>
-        <div class="job_content">
-          <div class="info_left">
-            <h1 class="blue_text">Tufts University</h1>
-            <p>Jan 2014 - June 2014<br>(6 months)</p>
-          </div>
-          <div class="info_right">
-            <h1>Teaching Assistant for Introduction to CS</h1>
-            <p>As a TA I had weekly responsibilities such as lab assistance, grading homework, office hours, etc.  In addition, I spent time responding to emergency situations such as holding an impromptu lab in my dorm during a snowstorm.</p>
-          </div>
-          <div class="spacer" style="clear: both;"></div>
-        </div>
-      </div>
+      {% endfor %}
 
     </div>
   </div>
 
-  <div class="project_highlights">
+  <div class="project_highlights" id="projects">
     <h1>PROJECT HIGHLIGHTS</h1>
     <div class="title_underline"></div>
 
+    {% for post in site.posts %}
     <div class="project_instance">
       <div class="project_photo">
-        <img class="project_img" src="projects/opensource/preview.png">
+        <img class="project_img" src="projects/{{post.folder}}/preview.png">
       </div>
 
       <div class="project_text_container">
-        <h2>Open Source Projects</h2>
-        <a class= "link" href="http://github.com/cwrichardkim" target="_blank">Github.com</a>
-        <p>Since Freshman year of College, I've open sourced a number of iOS projects. 5 of these projects have hit the #1 spot on all of Github's global trending pages. For a while, the popularity of these projects placed me as the #7 trending developer (<a href="http://i.imgur.com/YrkArPl.png">above even Twitter!</a>).<a href="#"><div class="border_button">More Information<br>(coming soon)</div></a>
+        <h2>{{post.preview_title}}</h2>
+        <a class= "link" href="{{post.link}}" target="_blank">{{post.link_title}}</a>
+        <p>{{post.preview_description }}</p>
+        {% if post.hidden %}
+          <a href="#"><div class="border_button">{{post.button_text}}<br>(coming soon)</div></a>
+        {% else %}
+          <a href="{{post.url}}"><div class="border_button">{{post.button_text}}</div></a>
+        {% endif %}
       </div>
     </div>
+    {% endfor %}
 
-    <div class="project_instance">
-      <div class="project_photo">
-        <img class="project_img" src="projects/twindr/preview.png">
-      </div>
-
-      <div class="project_text_container">
-        <h2>Twindr iOS app</h2>
-        <a class= "link" href="http://twindr.me" target="_blank">twindr.me</a>
-        <p>Swipe left to unfollow! The Twitter / Tinder mashup for cleaning your Twitter feed. With 1 million cards swiped in the first month, the app was featured on <a href="http://www.producthunt.com/posts/twindr">ProductHunt</a>, <a href="http://gizmodo.com/meet-twindr-the-twitter-tinder-mashup-you-never-knew-y-1680456468">Gizmodo</a>, <a href="http://www.lifehacker.co.uk/2015/01/23/twindr-ios-twittertinder-love-child-lets-swipe-unfollow">LifeHacker</a>, and more.</p>
-        <a href="projects/twindr/twindr.html"><div class="border_button">The Details</div></a>
-      </div>
-    </div>
-
-    <div class="project_instance">
-      <div class="project_photo">
-        <img class="project_img" src="projects/evoqe/preview.png">
-      </div>
-
-      <div class="project_text_container">
-        <h2>Evoqe LLC (platform)</h2>
-        <a class= "link" href="http://bit.ly/evoqeapp" target="_blank">iTunes Store</a>
-        <p>Debuting as "WeParty", Evoqe put college life on an app. Half of the product is a college event platform, the other half advertises local late-night dining options.</p>
-        <a href="#"><div class="border_button">The Story<br>(coming soon)</div></a>
-      </div>
-    </div>
-
-    <div class="project_instance">
-      <div class="project_photo">
-        <img class="project_img" src="projects/polyhack/preview.png">
-      </div>
-
-      <div class="project_text_container">
-        <h2>Tufts PolyHack 2015</h2>
-        <a class= "link" href="http://2015.polyhack.tufts.io/" target="_blank">http://2015.polyhack.tufts.io/</a>
-        <p>The largest and most successful Tufts Hackathon to date. The projects were incredible, the sponsors were engaging, the first-timer attendance was mind-boggling, the swag was dope, and the designer-specific events couldn't have gone better.</p>
-        <a href="#"><div class="border_button">Behind the Scenes<br>(coming soon)</div></a>
-      </div>
-    </div>
-
-    <a href="projects.html"><div class="border_button larger_button">See All Projects<br>(coming soon)</div></a>
-    <div class="button_subtext_container"><p class="button_subtext">Including Hackathons, Chrome Extensions, Web Projects, Mac OSX apps, and more</p></div>
+    <a href="mailto:cwrichardkim@gmail.com"><div class="border_button larger_button">Contact</div></a>
+    <div class="button_subtext_container"><p class="button_subtext">Can't say not to a cup of ☕️</p></div>
 
   </div>
 
 </body>
-</html>
+
+<script type="text/javascript">
+  window.onload = function () {
+    function fadeIn(className, animName) {
+      var els = document.getElementsByClassName(className);
+      if (els && els.length > 0) {
+        el = els[0]
+        if (el)
+          el.classList.add(animName);
+      }
+    }
+    fadeIn("intro-container-right", "intro-container-right-anim");
+    fadeIn("background-image", "background-image-anim");
+    fadeIn("downwards_curved_triangle", "down_arrow_anim");
+  }
+</script>

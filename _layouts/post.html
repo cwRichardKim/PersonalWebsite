@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href='https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat|Hind:400,500,600' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="favicon.ico" />
+  <title>{{post.meta_title}}</title>
+  <meta name="description" content="{{meta_description}}">
+  <meta name="author" content="cwRichardKim (Choong-Won Richard Kim)">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    {% include post.css %}
+  </style>
+  {% include google-analytics.html %}
+  <script type="text/javascript">
+    window.onload = function () {
+      function fadeIn(className, animName) {
+        var els = document.getElementsByClassName(className);
+        if (els && els.length > 0) {
+          el = els[0]
+          if (el)
+            el.classList.add(animName);
+        }
+      }
+      fadeIn("intro-container-right", "intro-container-right-anim");
+      fadeIn("background-image", "background-image-anim");
+    }
+  </script>
+</head>
+
+<body>
+  <div class="top-container">
+    <div class="background-image">
+      <div class="image-overlay">
+        <div class="intro-container-right">
+          <div class="intro-content">
+            <div class="header-container">
+              <h1>{{ page.title | upcase }}</h1>
+            </div>
+            <div class="sub-header-container">
+              <h1>{{page.subtitle}}</h1>
+            </div>
+            <div class="links-container">
+              <div class="social-icon-container">
+                {% for link_hash in page.links %}
+                  {% for link in link_hash %}
+                  <a class="social-icon" target="_blank" href="{{link[1]}}">
+                    <img src="/projects/twindr/{{link[0]}}.svg" alt="{{link[0]}}">
+                  </a>
+                  {% endfor %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="project_description">
+    {{content}}
+    <a href="/#projects"><div class="border_button larger_button">See All Projects</div></a>
+
+    <div class="button_subtext_container"><p class="button_subtext">Including Hackathons, Open Source Projects, Apps, and more!</p></div>
+  </div>
+</body>
+</html>
