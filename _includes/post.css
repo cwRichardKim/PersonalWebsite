@@ -166,6 +166,7 @@ a {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 3px;
   font-size: 20px;
+  max-width: 350px;
 }
 
 .top-container .links-container {
@@ -298,18 +299,23 @@ a {
 @media screen and (max-width:720px) {
   /* project description half screen */
   .project_description p {
-    width: 80%;
-    max-width: 650px;
+    max-width: 80%;
+    width: fit-content;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
     padding-left: 10px;
   }
 
   .project_description img {
-    max-width: 80%;
+    max-width: 100%;
   }
 
   .project_description .button_subtext {
     width: 80%;
     max-width: 650px;
+  }
+  .project_description h2 {
+    max-width: 80%;
   }
   /** project description half screen end **/
 }
