@@ -85,13 +85,13 @@ a {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  margin-bottom: 120px;
+  margin-bottom: 40px;
 }
 
 .top-container .background-image {
   height: 110%;
   width: auto;
-  background-image: url("twindr_cover.png");
+  background-image: url("/projects/{{page.folder}}/cover.png");
   background-repeat: no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -201,6 +201,15 @@ a {
 
 /* project description start */
 
+.project_description {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.project_description .buffer_space {
+  padding-top: 20px;
+}
+
 .project_description h1 {
   font-family: 'Hind', sans-serif;
   letter-spacing: 1.8px;
@@ -208,6 +217,7 @@ a {
   font-weight: 500;
   color: #4A4A4A;
   text-align: center;
+  padding-top: 80px;
 }
 
 .project_description h2 {
@@ -215,41 +225,42 @@ a {
   letter-spacing: 2.24px;
   font-size: 30px;
   font-weight: 400;
-  margin-bottom:5px;
+  margin: auto;
   color: #4A4A4A;
   max-width: 650px;
+  padding-left: 15px;
+  padding-top: 20px;
 }
 
 .project_description p {
   font-family: 'Helvetica Neue', sans-serif;
   color: #9B9B9B;
   line-height: 25px;
-  margin-top: 20px;
-  width: 100%;
   max-width: 650px;
+  width: fit-content;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  margin: 25px auto;
+  padding-left: 15px;
 }
 
-.project_description {
-  width: 100%;
-  margin-bottom: 100px;
-}
-
-.project_description .title_underline {
+.project_description hr {
   width: 170px;
   height: 3px;
   border-radius: 1.5px;
+  border-width: 0px;
   background-color: #4A4A4A;
-  margin: 10px auto;
+  color: #4A4A4A;
+  margin: 10px auto 40px auto;
 }
 
-.project_description .description_instance {
-  margin-top: 80px;
-}
-
-.project_description .project_photo {
-  width: 650px;
+.project_description img {
+  max-width: 650px;
+  height: auto;
   text-align: center;
   margin: auto;
+  margin-left: -15px;
+  padding-top: 40px;
 }
 
 .project_description .larger {
@@ -257,25 +268,8 @@ a {
   max-width: 900px;
 }
 
-.project_description .project_img {
-  height: auto;
-  max-width: 100%;
-}
-
-.project_description .project_text_container {
-  width: fit-content;
-  width: -moz-fit-content;
-  width: -webkit-fit-content;
-  margin: 35px auto;
-  padding-left: 15px;
-}
-
 .project_description .chapter_heading {
   margin: 142px 0px 59px 0px;
-}
-
-.project_description .intro_text {
-  margin-top: 40px;
 }
 
 .project_description .larger_button {
@@ -286,9 +280,8 @@ a {
  }
 
  .project_description .button_subtext {
-   max-width: 100%;
+   max-width: 90%;
    text-align: center;
-   width: 100%;
    display: table;
    margin: 0 auto;
  }
@@ -305,20 +298,12 @@ a {
 @media screen and (max-width:720px) {
   /* project description half screen */
   .project_description p {
-    width: 100%;
-  }
-
-  .project_description .project_text_container {
     width: 80%;
     max-width: 650px;
     padding-left: 10px;
   }
 
-  .project_description .project_photo {
-    width: 100%;
-  }
-
-  .project_description .project_img {
+  .project_description img {
     max-width: 80%;
   }
 
