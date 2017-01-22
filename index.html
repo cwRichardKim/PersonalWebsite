@@ -42,6 +42,9 @@ title: Richard Kim (cwRichardKim)
             </div>
           </div>
         </div>
+        <div class="scroll-indicator">
+          {% include down_arrow.svg %}
+        </div>
       </div>
     </div>
   </div>
@@ -131,5 +134,7 @@ title: Richard Kim (cwRichardKim)
     fadeIn("intro-container-right", "intro-container-right-anim");
     fadeIn("background-image", "background-image-anim");
     fadeIn("downwards_curved_triangle", "down_arrow_anim");
+    setTimeout( function(){fadeIn("scroll-indicator", "scroll-indicator-fade-in-anim")}, 1000 );
+    setTimeout( function(){fadeIn("scroll-indicator", "scroll-indicator-bounce-anim")}, 1500 );
   }
 </script>

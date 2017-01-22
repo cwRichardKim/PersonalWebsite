@@ -149,11 +149,11 @@ a {
   background-size: cover;
   background-position: center center;
   opacity: 0.7;
-  -webkit-transition: -webkit-transform 0.4s ease-out, opacity 0.8s ease-out;
-  transition:                 transform 0.4s ease-out, opacity 0.8s ease-out;
 }
 
 .top-container .background-image-anim {
+  -webkit-transition: -webkit-transform 0.4s ease-out, opacity 0.8s ease-out;
+  transition:                 transform 0.4s ease-out, opacity 0.8s ease-out;
   -ms-transform:      translate(0px,-10px);
   -webkit-transform:  translate(0px,-10px);
   transform:          translate(0px,-10px);
@@ -180,11 +180,11 @@ a {
   padding: 80px 60px 60px 60px;
   opacity: 0;
   min-width: 440px;
-  -webkit-transition: -webkit-transform 0.5s ease-out, opacity 1s ease-out;
-  transition:                 transform 0.5s ease-out, opacity 1s ease-out;
 }
 
 .top-container .intro-container-right-anim {
+  -webkit-transition: -webkit-transform 0.5s ease-out, opacity 1s ease-out;
+  transition:                 transform 0.5s ease-out, opacity 1s ease-out;
   -ms-transform: translate(0px,-40px);
   -webkit-transform: translate(0px,-40px);
   transform: translate(0px,-40px);
@@ -277,6 +277,55 @@ a {
   opacity: 1 !important;
 }
 
+.top-container .scroll-indicator {
+  position: absolute;
+  bottom: 140px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  .down-arrow-svg {
+    width: 20px;
+  }
+}
+
+.top-container .scroll-indicator-fade-in-anim {
+  -webkit-transition: -webkit-transform 0.5s ease-out, opacity 1s ease-out;
+  transition:                 transform 0.5s ease-out, opacity 1s ease-out;
+  opacity: 1;
+}
+
+.top-container .scroll-indicator-bounce-anim {
+  animation-name: bounce, bounce;
+  -webkit-animation-name: bounce, bounce;
+  animation-duration: .375s, 1.425s;
+  -webkit-animation-duration: .375s, 1.425s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-direction: normal, alternate;
+  -webkit-animation-direction: normal, alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+    -webkit-transform: translateY(-4px);
+  }
+  100% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+  }
+}
 /* cover page (top container) end --------------------------------------------*/
 
 /* timeline start */
