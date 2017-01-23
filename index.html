@@ -123,7 +123,7 @@ title: Richard Kim (cwRichardKim)
 
 <script type="text/javascript">
   window.onload = function () {
-    function fadeIn(className, animName) {
+    function applyAnim(className, animName) {
       var els = document.getElementsByClassName(className);
       if (els && els.length > 0) {
         el = els[0]
@@ -131,10 +131,10 @@ title: Richard Kim (cwRichardKim)
           el.classList.add(animName);
       }
     }
-    fadeIn("intro-container-right", "intro-container-right-anim");
-    fadeIn("background-image", "background-image-anim");
-    fadeIn("downwards_curved_triangle", "down_arrow_anim");
-    setTimeout( function(){fadeIn("scroll-indicator", "scroll-indicator-fade-in-anim")}, 1000 );
-    setTimeout( function(){fadeIn("scroll-indicator", "scroll-indicator-bounce-anim")}, 1500 );
+    applyAnim("intro-container-right", "intro-container-right-anim");
+    applyAnim("background-image", "background-image-anim");
+    applyAnim("downwards_curved_triangle", "down_arrow_anim");
+    setTimeout( function(){applyAnim("scroll-indicator", "scroll-indicator-fade-in-anim")}, 2000 );
+    setTimeout( function(){applyAnim("scroll-indicator", "scroll-indicator-bounce-anim")}, 2500 );
   }
 </script>
