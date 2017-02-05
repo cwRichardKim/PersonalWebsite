@@ -10,20 +10,6 @@
   <style type="text/css">
     {% include post.css %}
   </style>
-  <script type="text/javascript">
-    window.onload = function () {
-      function fadeIn(className, animName) {
-        var els = document.getElementsByClassName(className);
-        if (els && els.length > 0) {
-          el = els[0]
-          if (el)
-            el.classList.add(animName);
-        }
-      }
-      fadeIn("intro-container-right", "intro-container-right-anim");
-      fadeIn("background-image", "background-image-anim");
-    }
-  </script>
 </head>
 
 <body>
@@ -43,7 +29,7 @@
                 {% for link_hash in page.links %}
                   {% for link in link_hash %}
                   <a class="social-icon" target="_blank" href="{{link[1]}}">
-                    <img src="/projects/twindr/{{link[0]}}.svg" alt="{{link[0]}}">
+                    <img src="/projects/{{page.folder}}/{{link[0]}}.svg" alt="{{link[0]}}">
                   </a>
                   {% endfor %}
                 {% endfor %}
@@ -51,6 +37,7 @@
             </div>
           </div>
         </div>
+        {% include down-arrow.html %}
       </div>
     </div>
   </div>
@@ -62,4 +49,20 @@
   </div>
 </body>
 {% include google-analytics.html %}
+<script type="text/javascript">
+  window.onload = function () {
+    function applyAnim(className, animName) {
+      var els = document.getElementsByClassName(className);
+      if (els && els.length > 0) {
+        el = els[0]
+        if (el)
+          el.classList.add(animName);
+      }
+    }
+    applyAnim("intro-container-right", "intro-container-right-anim");
+    applyAnim("background-image", "background-image-anim");
+    setTimeout( function(){applyAnim("scroll-indicator", "scroll-indicator-fade-in-anim")}, 2000 );
+    setTimeout( function(){applyAnim("scroll-indicator", "scroll-indicator-bounce-anim")}, 2500 );
+  }
+</script>
 </html>
