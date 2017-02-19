@@ -112,7 +112,7 @@ a {
 
 .top-container .image-overlay {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: -webkit-flex;
   display: flex;
   -webkit-justify-content: flex-end;
