@@ -391,7 +391,7 @@ a {
 .project_highlights {
   width: 100%;
   margin-bottom: 100px;
-  
+
   h1 {
     font-family: $h1-font-family;
     letter-spacing: $h1-letter-spacing;
@@ -456,6 +456,7 @@ a {
 
   .project_img {
     height: auto;
+    width: 450px;
     max-width: 100%;
   }
 
