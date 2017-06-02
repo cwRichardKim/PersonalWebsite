@@ -381,7 +381,24 @@ a {
     text-align: left;
     width: 50%;
     max-width: 600px;
+    .job_content_text_mobile {
+      display: none;
+    }
+    .textButton {
+      background:none;
+      border:none;
+      margin:0;
+      padding:0;
+      color: $link-color;
+      font-family: $base-font-family;
+      font-size: 15px;
+      &:hover {
+        color: $link-color-hover;
+        text-decoration: none;
+      }
+    }
   }
+
 }
 
 
@@ -568,6 +585,19 @@ a {
     min-width: 330px;
   }
   /** top container mobile end **/
+
+  /* job section mobile */
+
+  .timeline .info_right .job_content_text {
+    display: none;
+  }
+
+  .timeline .info_right .job_content_text_mobile {
+    display: inline;
+  }
+
+  /** job section mobile end **/
+
   /* project highlights mobile */
   .project_highlights .project_instance {
     margin-top: 100px;

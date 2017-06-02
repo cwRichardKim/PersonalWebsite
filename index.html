@@ -79,7 +79,11 @@ title: Richard Kim (cwRichardKim)
             </div>
             <div class="info_right">
               <h1>{{job.position}}</h1>
-              <p>{{job.content}}</p>
+              <div class="job_content_text" id="job_{{job.jobID}}">{{job.content}}</div>
+              <div class="job_content_text_mobile" id="job_{{job.jobID}}_trunc">
+                {{ job.content | split:'<!--break-->' | first }}{% if job.content contains '<!--break-->' %}...
+                <button class="textButton" onclick="readMoreClicked('{{job.jobID}}')">[read more]</button>{% endif %}
+              </div>
             </div>
             <div class="spacer" style="clear: both;"></div>
           </div>
@@ -134,5 +138,9 @@ title: Richard Kim (cwRichardKim)
     applyAnim("downwards_curved_triangle", "down_arrow_anim");
     setTimeout( function(){applyAnim("scroll-indicator", "scroll-indicator-fade-in-anim")}, 2000 );
     setTimeout( function(){applyAnim("scroll-indicator", "scroll-indicator-bounce-anim")}, 2500 );
+  }
+  function readMoreClicked(jobID) {
+    var test = document.getElementById('job_'+jobID).style.display = "inline";
+    document.getElementById('job_'+jobID+'_trunc').style.display = "none";
   }
 </script>
