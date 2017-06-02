@@ -3,7 +3,7 @@ preview_title: "JumboSmash"
 link: "http://jumbosmash.com"
 link_title: "jumbosmash.com"
 preview_description: "We spent a year making a beautiful cross-platform dating app that only worked for Tufts Seniors during Senior Week.  It was a huge success, with over 80% of the senior class on the app and more than 1 million swipes within the first 24 hours (5m by the end of the week)."
-button_text: "About Building It"
+button_text: "About"
 
 title: JumboSmash
 subtitle: "A year of hard work for a week of fun"
