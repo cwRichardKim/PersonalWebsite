@@ -1,24 +1,17 @@
 source "https://rubygems.org"
-ruby RUBY_VERSION
 
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-gem "jekyll", "3.6.3"
+ruby File.read(".ruby-version").strip
 
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
-gem "minima"
+gem "jekyll", "~> 4.3.2"
 
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
+group :jekyll_plugins do
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+end
 
-# If you have any plugins, put them here!
-# group :jekyll_plugins do
-#   gem "jekyll-github-metadata", "~> 1.0"
-# end
+# For live reloading of pages during development
+gem "webrick", "~> 1.8"
+
+# Explicitly specify a compatible version of listen
+gem "listen", "~> 3.8"
