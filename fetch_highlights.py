@@ -3,7 +3,6 @@ import json
 import requests
 from datetime import datetime
 
-# You'll set this as an environment variable
 READWISE_TOKEN = os.environ.get('READWISE_TOKEN')
 API_URL = 'https://readwise.io/api/v2/highlights/'
 OUTPUT_FILE = 'data/highlights.json'
