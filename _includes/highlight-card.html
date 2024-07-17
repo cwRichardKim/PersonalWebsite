@@ -1,0 +1,43 @@
+<div class="highlight-card">
+  <style>
+    .highlight-card {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(249, 249, 249, 0.9);
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .highlight-card .meta {
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 10px;
+    }
+    .highlight-card .content {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #333;
+    }
+    .highlight-card .note {
+      font-style: italic;
+      margin-top: 10px;
+      color: #666;
+    }
+    .highlight-card a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .highlight-card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <div class="meta">
+    From <a href="{{ include.highlight.source_url }}" target="_blank">{{ include.highlight.title }}</a> 
+    by {{ include.highlight.author }} | {{ include.highlight.date | date: "%B %d, %Y" }}
+  </div>
+  <div class="content">{{ include.highlight.content }}</div>
+  {% if include.highlight.note != '' %}
+    <div class="note">Note: {{ include.highlight.note }}</div>
+  {% endif %}
+</div>
