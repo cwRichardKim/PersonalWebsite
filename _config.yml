@@ -35,6 +35,8 @@ sass:
 collections:
   jobs:
     output: false
+  highlights:
+    output: true
 
 exclude:
   - Gemfile
