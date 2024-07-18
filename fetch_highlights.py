@@ -30,7 +30,12 @@ def fetch_exports():
     return all_results
 
 def filter_highlights(highlights):
-    return [h for h in highlights if any(tag['name'] == 'share' for tag in h.get('tags', []))]
+    return [h for h in highlights 
+        if any(
+            tag['name'] == 'share' or h['is_favorite']
+            for tag in h.get('tags', [])
+        )
+    ]
 
 def slugify(text):
     text = text.lower()
