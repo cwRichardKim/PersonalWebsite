@@ -5,6 +5,7 @@ book_url: https://readwise.io/bookreview/40265002
 category: articles
 date: '2024-05-06 12:50:48'
 highlight_id: 715901110
+is_favorite: false
 layout: highlight
 note: ''
 source: reader

@@ -5,6 +5,7 @@ book_url: https://readwise.io/bookreview/40932677
 category: podcasts
 date: '2024-05-27 16:09:50'
 highlight_id: 725238351
+is_favorite: true
 layout: highlight
 note: ''
 source: snipd

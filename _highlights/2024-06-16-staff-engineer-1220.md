@@ -5,6 +5,7 @@ book_url: https://readwise.io/bookreview/39666207
 category: books
 date: '2024-06-16 04:56:00'
 highlight_id: 734367196
+is_favorite: false
 layout: highlight
 note: ''
 source: kindle

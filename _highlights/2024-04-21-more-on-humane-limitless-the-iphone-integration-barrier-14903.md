@@ -5,6 +5,7 @@ book_url: https://readwise.io/bookreview/39835936
 category: articles
 date: '2024-04-21 17:57:59'
 highlight_id: 709700913
+is_favorite: false
 layout: highlight
 note: Antitrust case against [[Apple]]. Humane is attempting to exist outside the
   Apple ecosystem but that’s its greatest flaw. It does demonstrate hubris from the

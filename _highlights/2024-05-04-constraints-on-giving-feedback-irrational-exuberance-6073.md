@@ -5,6 +5,7 @@ book_url: https://readwise.io/bookreview/40207660
 category: articles
 date: '2024-05-04 14:27:39'
 highlight_id: 715110965
+is_favorite: false
 layout: highlight
 note: Commentary can be polarizing and toxic
 source: reader

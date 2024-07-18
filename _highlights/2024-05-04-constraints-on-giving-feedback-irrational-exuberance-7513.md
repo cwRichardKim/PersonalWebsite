@@ -5,6 +5,7 @@ book_url: https://readwise.io/bookreview/40207660
 category: articles
 date: '2024-05-04 14:28:40'
 highlight_id: 715111134
+is_favorite: false
 layout: highlight
 note: Commentary isn’t feedback and can be quite toxic
 source: reader

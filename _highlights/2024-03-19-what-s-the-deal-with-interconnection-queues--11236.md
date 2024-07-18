@@ -5,6 +5,7 @@ book_url: https://readwise.io/bookreview/38822670
 category: articles
 date: '2024-03-19 14:05:01'
 highlight_id: 694966508
+is_favorite: false
 layout: highlight
 note: Discussing energy grid for renewables and why progress has been slow to add
   new nodes in the grid. Highlights why this hasn’t been an issue until now. Gas plants

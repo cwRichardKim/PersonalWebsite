@@ -5,6 +5,7 @@ book_url: https://readwise.io/bookreview/41392336
 category: articles
 date: '2024-06-11 14:18:13'
 highlight_id: 732238423
+is_favorite: false
 layout: highlight
 note: Assuming there will be rev share down the road for plus signups, this seems
   almost 1:1 with the google search deal (though much less lucrative)

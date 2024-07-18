@@ -41,7 +41,12 @@ title: Richard Kim (cwRichardKim)
               </div>
             </div>
             <!-- <div class="highlight-container">
-              {% assign random_highlight = site.highlights | sample %}
+              {% assign favorite_highlights = site.highlights | where: "is_favorite", true %}
+              {% if favorite_highlights.size > 0 %}
+                {% assign random_highlight = favorite_highlights | sample %}
+              {% else %}
+                {% assign random_highlight = site.highlights | sample %}
+              {% endif %}
               {% include highlight-card.html highlight=random_highlight %}
             </div> -->
           </div>

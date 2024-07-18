@@ -5,6 +5,7 @@ book_url: https://readwise.io/bookreview/38889200
 category: articles
 date: '2024-03-21 15:24:17'
 highlight_id: 695953700
+is_favorite: true
 layout: highlight
 note: On migrations
 source: reader

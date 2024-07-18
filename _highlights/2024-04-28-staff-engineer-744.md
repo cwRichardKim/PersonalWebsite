@@ -5,6 +5,7 @@ book_url: https://readwise.io/bookreview/39666207
 category: books
 date: '2024-04-28 04:56:00'
 highlight_id: 712707618
+is_favorite: false
 layout: highlight
 note: Second leverage point (interface, data model). Areas to invest more in quality
 source: kindle
