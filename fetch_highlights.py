@@ -81,9 +81,9 @@ def main():
         print(f"Fetched {len(exports)} books")
 
         print("Processing highlights...")
-        for book in exports:
+        for i, book in enumerate(exports, 1):
             filtered_highlights = filter_highlights(book['highlights'])
-            print(f"Processing {len(filtered_highlights)} highlights for '{book['title']}'")            
+            print(f"Processing book {i} of {len(exports)}: '{book['title']}' - {len(filtered_highlights)} highlights")
             for highlight in filtered_highlights:
                 create_markdown_file(highlight, book)
         
