@@ -138,7 +138,7 @@ a {
   overflow: hidden;
 
   .background-image {
-    height: 110vh;
+    height: calc(100vh + 10px);
     width: auto;
     background-image: url("/assets/background.jpg");
     background-repeat: no-repeat;
