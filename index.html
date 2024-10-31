@@ -71,9 +71,9 @@ title: Richard Kim (cwRichardKim)
     <div class="timeline_vert_line"></div>
 
     <div class="jobs_container">
-      {% for job in site.jobs reversed %}
-
-        {% if job == site.jobs.first %}
+      {% assign visible_jobs = site.jobs | where: "show", true | reverse %}
+      {% for job in visible_jobs %}
+        {% if job == visible_jobs.last %}
         <div class="job_instance last_job">
           <div class="timeline_vert_line"></div>
         {% else %}
