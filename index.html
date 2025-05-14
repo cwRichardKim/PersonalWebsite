@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Richard Kim (cwRichardKim)
+scripts:
+  - /assets/js/duration-calculator.js
 ---
 
 <body>
@@ -84,7 +86,7 @@ title: Richard Kim (cwRichardKim)
           <div class="job_content">
             <div class="info_left">
               <h1 class="blue_text">{{job.company}}</h1>
-              <p>{{job.time}}{% if job.duration %}<br>({{job.duration}}){% endif %}</p>
+              <p>{{job.time}}{% if job.duration %}<br>({{job.duration}}){% elsif job.time contains "present" %}{% assign start_date = job.time | split: " - " | first %}<br><span data-start-date="{{ start_date }}"></span>{% endif %}</p>
             </div>
             <div class="info_right">
               <h1>{{job.position}}</h1>
