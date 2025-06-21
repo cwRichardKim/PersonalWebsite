@@ -14,4 +14,10 @@ title: This Will Make You a Better Decision Maker | Annie Duke
 ---
 
 Transcript:
-There's all sorts of parenting books. There's all sorts of styles. You know, a book needs to sell. So they need to sell you something new or different or whatever that’s okay. But the only thing that matters really is that your kids know you love them. Like really know deep in their bones know you love them. And we can argue breastfeeding versus not breastfeeding or coast sleeping versus not coast sleeping or attachment parenting or sleep training or training or something. We can talk about all that stuff. Right. Do you homeschool do you send them to private school? Do you send them to school? Well, we can have lots of discussion, but it all dwarfs in comparison to your children know that you would lay down in the street in the front of a bus if it meant that they would be alive And happy. Like that's the number one thing I say. Number two is at some point you will drop your baby on its head.
+There’s all sorts of parenting books and styles. A book needs to sell, so they try to offer something new or different—and that’s okay. But the only thing that really matters is that your kids know you love them. Like, deep in their bones, they know you love them.
+
+We can argue about breastfeeding versus not breastfeeding, co-sleeping versus not co-sleeping, attachment parenting versus sleep training. We can talk about all of that. Do you homeschool? Send them to private school? Public school? There’s plenty to discuss, but all of it pales in comparison to your children knowing that you would lay down in the street in front of a bus if it meant they would be alive and happy.
+
+That’s the number one thing.
+
+Number two? At some point, you will drop your baby on its head.

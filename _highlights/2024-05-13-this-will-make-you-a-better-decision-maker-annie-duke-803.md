@@ -16,5 +16,4 @@ title: This Will Make You a Better Decision Maker | Annie Duke
 Parental Influence on Child's Personality
 
 Transcript:
-Speaker 1
-You have no influence whatsoever. Basically on what your child's personality is. What you can do as a parent is make sure they say please and thank you.
+You have no influence whatsoever on what your child's personality is. What you can do as a parent is make sure they say please and thank you.
