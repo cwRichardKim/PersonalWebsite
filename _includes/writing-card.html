@@ -1,0 +1,8 @@
+<div class="writing_card">
+  <div class="writing_title"><a href="{{ include.entry.url }}" target="_blank">{{ include.entry.title }}</a></div>
+  <div class="writing_meta">{{ include.entry.source }} · {{ include.entry.date | date: "%b %-d, %Y" }}</div>
+  {% if include.entry.excerpt %}
+  <div class="writing_excerpt">{{ include.entry.excerpt }}</div>
+  {% endif %}
+  <div class="writing_actions"><a class="inline-cta" href="{{ include.entry.url }}" target="_blank">Read on {{ include.entry.source }} →</a></div>
+</div>

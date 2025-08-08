@@ -445,6 +445,30 @@ a {
     text-decoration: underline;
   }
 
+  .inline-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    font-family: 'Hind', sans-serif;
+    letter-spacing: 1.2px;
+    font-size: 14px;
+    font-weight: 400;
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $link-color-hover;
+      text-decoration: underline;
+    }
+
+    &.disabled {
+      color: lighten($base-font-color, 25%);
+      pointer-events: none;
+      text-decoration: none;
+    }
+  }
+
   p {
     font-family: $base-font-family;
     font-style: italic;
@@ -513,8 +537,80 @@ a {
   }
 }
 
+/* writing highlights start */
+.writing_highlights {
+  width: 100%;
+  margin-top: 120px;
+  margin-bottom: 40px;
 
-/* project highlights end ----------------------------------------------------*/
+  h1 {
+    font-family: $h1-font-family;
+    letter-spacing: $h1-letter-spacing;
+    font-size: $h1-font-size;
+    font-weight: 500;
+    color: $h1-color;
+    text-align: center;
+  }
+
+  .title_underline {
+    width: 170px;
+    height: 3px;
+    border-radius: 1.5px;
+    background-color: #4A4A4A;
+    margin: 10px auto;
+  }
+
+  .writing_grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto 0 auto;
+  }
+
+  .writing_card {
+    background-color: rgba(249, 249, 249, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    padding: 20px;
+  }
+
+  .writing_title {
+    font-family: $h2-font-family;
+    letter-spacing: $h2-letter-spacing;
+    font-size: 22px;
+    font-weight: $h2-font-weight;
+    margin: 0 0 8px 0;
+
+    a {
+      color: $h2-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .writing_meta {
+    font-family: $base-font-family;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+  }
+
+  .writing_excerpt {
+    font-family: $base-font-family;
+    color: $base-font-color;
+    line-height: 1.6;
+  }
+
+  .writing_actions {
+    margin-top: 12px;
+  }
+}
+/* writing highlights end ----------------------------------------------------*/
 
 
 /* HALF SCREEN */
@@ -577,6 +673,12 @@ a {
     max-width: 500px;
   }
   /** project highlights half screen end **/
+
+  /* writing highlights half screen */
+  .writing_highlights .writing_grid {
+    grid-template-columns: 1fr;
+  }
+  /* writing highlights half screen end */
 }
 
 
@@ -608,4 +710,13 @@ a {
     margin-top: 100px;
   }
   /** project highlights mobile end **/
+
+  /* writing highlights mobile */
+  .writing_highlights {
+    margin-top: 80px;
+  }
+  .writing_highlights .writing_grid {
+    grid-template-columns: 1fr;
+  }
+  /* writing highlights mobile end */
 }

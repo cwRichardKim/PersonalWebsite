@@ -37,6 +37,8 @@ collections:
     output: false
   highlights:
     output: true
+  writing:
+    output: true
 
 exclude:
   - Gemfile
