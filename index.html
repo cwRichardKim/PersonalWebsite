@@ -127,18 +127,29 @@ scripts:
         <a class= "link" href="{{post.link}}" target="_blank">{{post.link_title}}</a>
         <p>{{post.preview_description }}</p>
         {% if post.hidden %}
-          <a href="#"><div class="border_button">{{post.button_text}}<br>(coming soon)</div></a>
+          <span class="inline-cta disabled">Coming soon</span>
         {% else %}
-          <a href="{{post.url}}"><div class="border_button">{{post.button_text}}</div></a>
+          <a class="inline-cta" href="{{post.url}}">Details →</a>
         {% endif %}
       </div>
     </div>
     {% endfor %}
 
-    <a href="mailto:cwrichardkim@gmail.com"><div class="border_button larger_button">Contact</div></a>
-    <div class="button_subtext_container"><p class="button_subtext">Can't say no to a cup of ☕️</p></div>
-
   </div>
+
+  <div class="writing_highlights" id="writing">
+    <h1>WRITING HIGHLIGHTS</h1>
+    <div class="title_underline"></div>
+    <div class="writing_grid">
+      {% assign writing_items = site.writing | sort: 'date' | reverse %}
+      {% for entry in writing_items limit:6 %}
+        {% include writing-card.html entry=entry %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <a href="mailto:cwrichardkim@gmail.com"><div class="border_button larger_button">Contact</div></a>
+  <div class="button_subtext_container"><p class="button_subtext">Can't say no to a cup of ☕️</p></div>
 
 </body>
 
