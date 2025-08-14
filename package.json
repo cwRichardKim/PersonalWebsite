@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "generate-rss": "tsx scripts/generate-rss.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "@types/xml2js": "^0.4.14",
+    "tsx": "^4.20.4",
+    "typescript": "^5.9.2",
+    "xml2js": "^0.6.2"
+  }
+}

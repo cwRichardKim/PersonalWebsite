@@ -1,0 +1,45 @@
+name: Update RSS Feed
+
+on:
+  schedule:
+    # Run weekly on Mondays at 9 AM PT (16:00 UTC)
+    - cron: '0 16 * * 1'
+  workflow_dispatch: # Allow manual triggering
+
+jobs:
+  update-rss:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm install
+        
+      - name: Generate RSS feed
+        run: npx tsx scripts/generate-rss.ts
+        
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet rss.xml; then
+            echo "no_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "no_changes=false" >> $GITHUB_OUTPUT
+          fi
+          
+      - name: Commit and push changes
+        if: steps.changes.outputs.no_changes == 'false'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add rss.xml
+          git commit -m "🤖 Auto-update RSS feed [skip ci]"
+          git push
