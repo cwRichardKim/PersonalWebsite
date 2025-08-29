@@ -77,11 +77,11 @@ scripts:
       {% for job in visible_jobs %}
         {% if job == visible_jobs.last %}
         <div class="job_instance last_job">
-          <div class="timeline_vert_line"></div>
         {% else %}
         <div class="job_instance">
         {% endif %}
 
+          <div class="timeline_vert_line"></div>
           <div class="job_marker_outer"><div class="job_marker_inner"></div></div>
           <div class="job_content">
             <div class="info_left">
@@ -140,6 +140,7 @@ scripts:
 
   </div>
 
+  <div class="background-texture" />
 </body>
 
 <script type="text/javascript">
