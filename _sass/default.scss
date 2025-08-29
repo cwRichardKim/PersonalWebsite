@@ -91,6 +91,7 @@ table {
 
 body {
   font-family: $base-font-family;
+  position: relative;
 }
 
 .border_button {
@@ -106,6 +107,7 @@ body {
   font-size: 18px;
   transition: .3s;
   border-radius: 4px;
+  background-color: #fff;
   &:visited {
     color: $link-color;
   }
@@ -286,6 +288,9 @@ a {
 
 /* timeline start */
 
+$margin-top-jobs-container: 100px;
+$margin-top-jobs-instance: 50px;
+
 .timeline {
   position: relative;
   width: 100%;
@@ -326,24 +331,29 @@ a {
   .timeline_vert_line {
     position: absolute;
     width: 2px;
-    height: calc(100% - 20px);
+    height: $margin-top-jobs-container;
     background: #0E2736;
     margin-left: calc(34.6% - 1px);
     margin-top: -1px;
     z-index: -1;
   }
 
+  .job_instance .timeline_vert_line {
+    height: calc(100% + $margin-top-jobs-instance);
+    top: 0;
+  }
+
   .last_job .timeline_vert_line {
-    height: 4px;
-    z-index: 1;
+    height: 10px;
   }
 
   .jobs_container {
-    margin-top: 100px;
+    margin-top: $margin-top-jobs-container;
   }
 
   .job_instance {
-    margin-top: 50px;
+    margin-top: $margin-top-jobs-instance;
+    position: relative;
   }
 
   .job_marker_outer {
@@ -353,10 +363,6 @@ a {
     margin-top: 3px;
     width: 20px; height: 20px;
     border-radius: 10px;
-  }
-
-  .last_job {
-    background-color: white;
   }
 
   .job_marker_inner {
@@ -412,7 +418,7 @@ a {
 /* project highlights start */
 .project_highlights {
   width: 100%;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 
   h1 {
     font-family: $h1-font-family;
@@ -516,6 +522,18 @@ a {
 
 /* project highlights end ----------------------------------------------------*/
 
+/* Background texture */
+.background-texture {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  // shoutout to zed.dev, i love the texture on the site
+  background-image: url("/assets/noisepattern.png");
+  background-repeat: repeat;
+  background-size: 180px;
+  opacity: 0.04;
+  pointer-events: none;
+}
 
 /* HALF SCREEN */
 @media screen and (max-width:720px) {
