@@ -331,7 +331,7 @@ $margin-top-jobs-instance: 50px;
   .timeline_vert_line {
     position: absolute;
     width: 2px;
-    height: calc($margin-top-jobs-container);
+    height: $margin-top-jobs-container;
     background: #0E2736;
     margin-left: calc(34.6% - 1px);
     margin-top: -1px;
