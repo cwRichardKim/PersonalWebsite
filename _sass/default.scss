@@ -544,6 +544,9 @@ $margin-top-jobs-instance: 50px;
   .timeline .timeline_vert_line {
     margin-left: 43px;
   }
+  .timeline .job_instance .timeline_vert_line {
+    margin-left: 43px;
+  }
   .timeline .info_left {
     margin-left: 80px;
     max-width: calc(100% - 100px);
@@ -610,6 +613,9 @@ $margin-top-jobs-instance: 50px;
   /** top container mobile end **/
 
   /* job section mobile */
+  .timeline .job_instance .timeline_vert_line {
+    margin-left: 43px;
+  }
 
   .timeline .info_right .job_content_text {
     display: none;
