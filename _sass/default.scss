@@ -546,6 +546,8 @@ $margin-top-jobs-instance: 50px;
   }
   .timeline .job_instance .timeline_vert_line {
     margin-left: 43px;
+    height: calc(100% + $margin-top-jobs-instance);
+    top: 0;
   }
   .timeline .info_left {
     margin-left: 80px;
@@ -615,6 +617,8 @@ $margin-top-jobs-instance: 50px;
   /* job section mobile */
   .timeline .job_instance .timeline_vert_line {
     margin-left: 43px;
+    height: calc(100% + $margin-top-jobs-instance);
+    top: 0;
   }
 
   .timeline .info_right .job_content_text {
