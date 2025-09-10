@@ -525,7 +525,7 @@ $margin-top-jobs-instance: 50px;
 /* Background texture */
 .background-texture {
   position: absolute;
-  z-index: -1;
+  z-index: -10;
   inset: 0;
   // shoutout to zed.dev, i love the texture on the site
   background-image: url("/assets/noisepattern.png");
