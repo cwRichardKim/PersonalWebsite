@@ -1,207 +1,6 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* Project-specific styles for individual project pages */
 
-/* normalize start */
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* normalizing end -----------------------------------------------------------*/
-
-/* standards */
-
-body {
-  font-family: sans-serif;
-}
-
-.border_button {
-  margin-top: 30px;
-  padding: 13px 15px 15px 15px;
-  max-width: 210px;
-  width: 70%;
-  border: 2px solid #77BAD8;
-  color: #77BAD8;
-  text-align: center;
-  font-family: "Helvetica Neue", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  transition: .3s;
-  border-radius: 4px;
-}
-
-a {
-  text-decoration: none;
-  color: #77BAD8;
-}
-
-/* standards end -------------------------------------------------------------*/
-
-/* cover page (top container) start */
-
-.top-container {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  margin-bottom: 40px;
-}
-
-.top-container .background-image {
-  height: 110%;
-  width: auto;
-  background-image: url("/projects/{{page.folder}}/cover.png");
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center center;
-  opacity: 0.7;
-  -webkit-transition: -webkit-transform 0.4s ease-out, opacity 0.8s ease-out;
-  transition:                 transform 0.4s ease-out, opacity 0.8s ease-out;
-}
-
-.top-container .background-image-anim {
-  -ms-transform:      translate(0px,-10px);
-  -webkit-transform:  translate(0px,-10px);
-  transform:          translate(0px,-10px);
-  opacity: 1;
-}
-
-.top-container .image-overlay {
-  width: 100%;
-  height: 100%;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: flex-end;
-  justify-content: flex-end;
-  background-color: rgba(27, 73, 99, .5);
-}
-
-.top-container .intro-container-right {
-  width: 50%;
-  height: 100%;
-  box-sizing: border-box;
-  ms-box-sizing: border-box;
-  webkit-box-sizing: border-box;
-  moz-box-sizing: border-box;
-  padding: 80px 60px 60px 60px;
-  opacity: 0;
-  min-width: 440px;
-  -webkit-transition: -webkit-transform 0.5s ease-out, opacity 1s ease-out;
-  transition:                 transform 0.5s ease-out, opacity 1s ease-out;
-}
-
-.top-container .intro-container-right-anim {
-  -ms-transform: translate(0px,-40px);
-  -webkit-transform: translate(0px,-40px);
-  transform: translate(0px,-40px);
-  opacity: 1;
-}
-
-.top-container .intro-content {
-  width: 100%;
-  max-width: 600px;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  color: white;
-}
-
-.top-container .intro-content div {
-  -webkit-transform: translateZ(0px); /* fixes safari text flicker */
-  -moz-osx-font-smoothing: grayscale; /* fixes moz text flicker */
-}
-
-.top-container .header-container {
-  margin-bottom: 18px;
-  font-size: 100px;
-  font-family: 'Fjalla One', sans-serif;
-}
-
-.top-container .sub-header-container {
-  margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 3px;
-  font-size: 20px;
-  max-width: 350px;
-}
-
-.top-container .links-container {
-  margin-top: 26px;
-  display: flex;
-  align-items: center;
-}
-
-.top-container .social-icon-container {
-  height: 28px;
-  display: -webkit-flex;
-  display: flex;
-  align-items: center;
-  -webkit-align-items: center;
-}
-
-.top-container .social-icon-container:hover .social-icon {
-  opacity: 0.5;
-}
-
-.top-container .social-icon {
-  position: relative;
-  margin-right: 25px;
-  opacity: 1;
-  transition: opacity 0.3s;
-}
-
-.top-container .social-icon:hover {
-  opacity: 1 !important;
-}
-
-/* cover page (top container) end --------------------------------------------*/
-
-/* project description start */
-
+/* Project Description Section */
 .project_description {
   width: 100%;
   margin-bottom: 100px;
@@ -273,31 +72,17 @@ a {
   margin: 142px 0px 59px 0px;
 }
 
-.project_description .larger_button {
-  width: 250px;
-  padding: 18px 20px 20px 20px;
-  margin-left: calc(50% - 125px);
-  margin-top: 130px;
- }
+/* Project-specific top container overrides */
+.top-container .background-image {
+  background-image: url("/projects/{{page.folder}}/cover.png");
+}
 
- .project_description .button_subtext {
-   max-width: 90%;
-   text-align: center;
-   display: table;
-   margin: 0 auto;
- }
+.top-container .sub-header-container {
+  max-width: 350px;
+}
 
- .project_description .button_subtext_container {
-  margin-top: 20px;
-   width: 100%;
- }
-
-/* project description end ---------------------------------------------------*/
-
-
-/* HALF SCREEN */
+/* Responsive styles for project pages */
 @media screen and (max-width:720px) {
-  /* project description half screen */
   .project_description p {
     max-width: 80%;
     width: fit-content;
@@ -314,26 +99,14 @@ a {
     width: 80%;
     max-width: 650px;
   }
+  
   .project_description h2 {
     max-width: 80%;
   }
-  /** project description half screen end **/
 }
 
-
-/* MOBILE */
 @media only screen and (max-device-width: 480px) and (orientation: portrait) {
-  /* top container mobile */
-  .top-container .intro-container-right {
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 0px;
-    min-width: 330px;
-  }
-  /** top container mobile end **/
-  /* project description mobile */
   .project_description .description_instance {
     margin-top: 100px;
   }
-  /** project description mobile end **/
 }
