@@ -1,4 +1,15 @@
-_site
-.sass-cache
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
 .jekyll-metadata
+
+# Ruby/Bundler
+vendor/
+.bundle/
+
+# Node.js dependencies
+node_modules/
+
+# OS generated files
 .DS_Store
