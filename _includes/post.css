@@ -72,6 +72,20 @@
   margin: 142px 0px 59px 0px;
 }
 
+.project_description .larger_button {
+  width: 250px;
+  padding: 18px 20px 20px 20px;
+  margin-left: calc(50% - 125px);
+  margin-top: 130px;
+}
+
+.project_description .button_subtext {
+  max-width: 90%;
+  text-align: center;
+  display: table;
+  margin: 0 auto;
+}
+
 /* Project-specific top container overrides */
 .top-container .background-image {
   background-image: url("/projects/{{page.folder}}/cover.png");
