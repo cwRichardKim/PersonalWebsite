@@ -1,0 +1,39 @@
+---
+layout: default
+title: Posts
+popular:
+  - title: "AI Has No Butt To Clench"
+    url: "https://www.bootstoobig.com/p/ai-has-no-butt-to-clench"
+  - title: "Anti-Misalignment"
+    url: "https://www.bootstoobig.com/p/anti-misalignment"
+  - title: "We spent a year building a dating app that only lasts one week"
+    url: "https://medium.com/@cwRichardKim/we-spent-a-year-building-a-dating-app-that-only-lasts-one-week-e6e1a10cedb3"
+---
+
+<body>
+  <div class="posts-container">
+    <div class="posts-section">
+      <h1>POPULAR</h1>
+      <ul class="posts-list">
+        {% for p in page.popular %}
+          <li><a href="{{ p.url }}" target="_blank">{{ p.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="posts-section">
+      <h2>ALL WRITING</h2>
+      <ul class="posts-list">
+        {% assign popular_links = page.popular | map: 'url' %}
+        {% for post in site.data.posts %}
+          {% unless popular_links contains post.link %}
+            <li>
+              <a href="{{ post.link }}" target="_blank">{{ post.title }}</a>
+              <span class="source">({{ post.source }})</span>
+            </li>
+          {% endunless %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</body>
