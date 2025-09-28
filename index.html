@@ -74,36 +74,47 @@ scripts:
 
     <div class="jobs_container">
       {% assign visible_jobs = site.jobs | where: "show", true | reverse %}
-      {% for job in visible_jobs %}
-        {% if job == visible_jobs.last %}
-        <div class="job_instance last_job">
+      {% assign regular_jobs = visible_jobs | where: "is_mini", false %}
+      {% assign mini_jobs = visible_jobs | where: "is_mini", true %}
+      {% assign all_jobs = regular_jobs | concat: mini_jobs %}
+      
+      {% for job in all_jobs %}
+        {% if job == all_jobs.last %}
+        <div class="job_instance last_job {% if job.is_mini %}mini_job{% endif %}">
         {% else %}
-        <div class="job_instance">
+        <div class="job_instance {% if job.is_mini %}mini_job{% endif %}">
         {% endif %}
 
           <div class="timeline_vert_line"></div>
           <div class="job_marker_outer"><div class="job_marker_inner"></div></div>
           <div class="job_content">
-            <div class="info_left">
-              <h1 class="blue_text">{{job.company}}</h1>
-              <p>
-                {{job.time}}
-                {% if job.duration %}
-                  <br>({{job.duration}})
-                {% elsif job.time contains "present" %}
-                  {% assign start_date = job.time | split: " - " | first %}
-                  <br><span data-start-date="{{ start_date }}"></span>
-                {% endif %}
-              </p>
-            </div>
-            <div class="info_right">
-              <h1>{{job.position}}</h1>
-              <div class="job_content_text" id="job_{{job.jobID}}">{{job.content}}</div>
-              <div class="job_content_text_mobile" id="job_{{job.jobID}}_trunc">
-                {{ job.content | split:'<!--break-->' | first }}{% if job.content contains '<!--break-->' %}...
-                <button class="textButton" onclick="readMoreClicked('{{job.jobID}}')">[read more]</button>{% endif %}
+            {% if job.is_mini %}
+              <div class="mini_job_content">
+                <h2 class="blue_text">{{job.company}}</h2>
+                <div class="mini_job_text">{{job.content}}</div>
               </div>
-            </div>
+            {% else %}
+              <div class="info_left">
+                <h1 class="blue_text">{{job.company}}</h1>
+                <p>
+                  {{job.time}}
+                  {% if job.duration %}
+                    <br>({{job.duration}})
+                  {% elsif job.time contains "present" %}
+                    {% assign start_date = job.time | split: " - " | first %}
+                    <br><span data-start-date="{{ start_date }}"></span>
+                  {% endif %}
+                </p>
+              </div>
+              <div class="info_right">
+                <h1>{{job.position}}</h1>
+                <div class="job_content_text" id="job_{{job.jobID}}">{{job.content}}</div>
+                <div class="job_content_text_mobile" id="job_{{job.jobID}}_trunc">
+                  {{ job.content | split:'<!--break-->' | first }}{% if job.content contains '<!--break-->' %}...
+                  <button class="textButton" onclick="readMoreClicked('{{job.jobID}}')">[read more]</button>{% endif %}
+                </div>
+              </div>
+            {% endif %}
             <div class="spacer" style="clear: both;"></div>
           </div>
         </div>
