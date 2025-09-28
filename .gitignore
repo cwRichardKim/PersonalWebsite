@@ -13,3 +13,5 @@ node_modules/
 
 # OS generated files
 .DS_Store
+__pycache__/
+tests/__pycache__/
