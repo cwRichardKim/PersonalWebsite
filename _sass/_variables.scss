@@ -1,0 +1,56 @@
+// Design tokens and variables
+// ==========================================
+
+// Colors
+$brand-blue: #77BAD8;
+$brand-blue-hover: #4fa6cd;
+$brand-gray: #9B9B9B;
+$brand-gray-light: #fdfdfd;
+$brand-gray-dark: #4A4A4A;
+$brand-text: #111;
+$brand-bg: #fdfdfd;
+
+// Typography
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$title-font-family: 'Fjalla One', sans-serif;
+$subtitle-font-family: 'Montserrat', sans-serif;
+$description-font-family: 'Hind', sans-serif;
+$h1-font-family: 'Hind', sans-serif;
+$h2-font-family: 'Hind', sans-serif;
+
+// Font sizes
+$title-font-size: 100px;
+$subtitle-font-size: 20px;
+$description-font-size: 15px;
+$h1-font-size: 30px;
+$h2-font-size: 30px;
+
+// Letter spacing
+$subtitle-letter-spacing: 3px;
+$description-letter-spacing: 0.5px;
+$h1-letter-spacing: 2.24px;
+$h2-letter-spacing: 2.24px;
+$square-link-letter-spacing: 0.14em;
+
+// Square link specific variables
+$square-link-font-family: 'Hind', sans-serif;
+$square-link-font-size: 15px;
+$square-link-font-weight: 600;
+$square-link-font-style: normal;
+$square-link-background: #fff;
+$square-link-color: #222;
+
+// Heading colors
+$h1-color: #4A4A4A;
+$h2-color: #4A4A4A;
+$h2-font-weight: 400;
+
+// Spacing
+$spacing-unit: 30px;
+$margin-top-jobs-container: 100px;
+$margin-top-jobs-instance: 50px;
+
+// Legacy variable mappings for compatibility
+$base-font-color: $brand-gray;
+$link-color: $brand-blue;
+$link-color-hover: $brand-blue-hover;

@@ -1,0 +1,43 @@
+/* Button Components */
+.border_button {
+  margin-top: 30px;
+  padding: 13px 15px 15px 15px;
+  max-width: 210px;
+  width: 70%;
+  border: 2px solid $link-color;
+  color: $link-color;
+  text-align: center;
+  font-family: $base-font-family;
+  font-weight: 600;
+  font-size: 18px;
+  transition: .3s;
+  border-radius: 4px;
+  background-color: #fff;
+  &:visited {
+    color: $link-color;
+  }
+
+  &:hover {
+    color: $link-color-hover;
+    text-decoration: none;
+  }
+}
+
+.larger_button {
+  width: 250px;
+  padding: 18px 20px 20px 20px;
+  margin: 130px auto 0;
+}
+
+.button_subtext {
+  max-width: 100%;
+  text-align: center;
+  width: 100%;
+  display: table;
+  margin: 0 auto;
+}
+
+.button_subtext_container {
+  margin-top: 20px;
+  width: 100%;
+}
