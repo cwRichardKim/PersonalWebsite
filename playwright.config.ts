@@ -23,14 +23,6 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
-  /* Force consistent screenshot naming across platforms */
-  expect: {
-    toHaveScreenshot: {
-      threshold: 0.01, // 1% tolerance for strict visual regression testing
-    },
-  },
-  /* Use consistent snapshot paths across platforms */
-  snapshotPathTemplate: '{testDir}/{testFileDir}/{testFileName}-snapshots/{arg}-{projectName}{ext}',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
