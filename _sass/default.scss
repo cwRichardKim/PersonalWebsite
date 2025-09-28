@@ -47,6 +47,7 @@ $square-link-color: #222;
   padding: 0;
   font-size: 100%;
   line-height: 1;
+  font-weight: normal;
 }
 
 /* standards */
@@ -331,7 +332,7 @@ $margin-top-jobs-instance: 50px;
   .job_marker_inner {
     border: 3px solid $link-color;
     margin: 2px;
-    width: 15px; height: 15px;
+    width: 16px; height: 16px;
     border-radius: 10px;
   }
 
@@ -435,26 +436,42 @@ $margin-top-jobs-instance: 50px;
   .project_instance {
     margin-top: 140px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .project_photo {
-    width: calc(50% - 80px);
-    text-align: right;
-    padding-left: 50px;
+    flex: 0 0 50%;
+    text-align: center;
   }
 
   .project_img {
     height: auto;
-    width: 450px;
-    max-width: 100%;
+    width: 100%;
+    max-width: 400px;
   }
 
   .project_text_container {
-    width: calc(50% - 30px);
-    height: 100%;
-    text-align: left;
+    flex: 0 0 50%;
+    padding-left: 40px;
+  }
+
+  @media screen and (max-width: 720px) {
+    .project_instance {
+      flex-direction: column;
+    }
+    
+    .project_photo {
+      flex: none;
+      margin-bottom: 20px;
+    }
+    
+    .project_text_container {
+      flex: none;
+      padding-left: 0;
+    }
   }
 
   .appstore_badge {
