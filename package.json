@@ -5,15 +5,15 @@
     "test:ui": "playwright test --ui",
     "test:headed": "playwright test --headed",
     "test:update-snapshots": "playwright test --update-snapshots",
-    "test:visual": "playwright test --grep @visual",
     "test:report": "playwright show-report",
-    "test:clean": "rm -rf tests/*-snapshots tests/test-results tests/playwright-report",
+    "test:clean": "npx rimraf tests/*-snapshots test-results playwright-report",
     "test:reset": "npm run test:clean && npm run test:update-snapshots"
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",
     "@types/node": "^24.2.1",
     "@types/xml2js": "^0.4.14",
+    "rimraf": "^6.0.1",
     "tsx": "^4.20.4",
     "typescript": "^5.9.2",
     "xml2js": "^0.6.2"
