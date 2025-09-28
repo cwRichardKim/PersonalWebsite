@@ -2,9 +2,9 @@ name: Screenshot Tests
 
 on:
   pull_request:
-    branches: [ main, master ]
+    branches: [ main, master, gh-pages ]
   push:
-    branches: [ main, master ]
+    branches: [ main, master, gh-pages ]
 
 jobs:
   screenshot-tests:
