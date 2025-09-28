@@ -144,6 +144,14 @@ a {
     padding: 80px 60px 60px 60px;
     opacity: 0;
     min-width: 440px;
+
+    // Responsive: full width on mobile
+    @media only screen and (max-device-width: 480px) and (orientation: portrait) {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 0px;
+      min-width: 330px;
+    }
   }
 
   .intro-container-right-anim {
@@ -287,6 +295,11 @@ $margin-top-jobs-instance: 50px;
     opacity: 0.5;
     -webkit-transition: -webkit-transform 0.5s ease-out, opacity 1s ease-out;
     transition:                 transform 0.5s ease-out, opacity 1s ease-out;
+
+    // Responsive: adjust position on mobile
+    @media screen and (max-width: 720px) {
+      margin-left: -30px;
+    }
   }
 
   .down_arrow_anim {
@@ -301,6 +314,11 @@ $margin-top-jobs-instance: 50px;
     margin-left: calc(34.6% - 1px);
     margin-top: -1px;
     z-index: -1;
+
+    // Responsive: adjust position on mobile
+    @media screen and (max-width: 720px) {
+      margin-left: 43px;
+    }
   }
 
   .job_instance .timeline_vert_line {
@@ -327,6 +345,11 @@ $margin-top-jobs-instance: 50px;
     margin-left: calc(34.6% - 10px);
     margin-top: 3px;
     width: 20px; height: 20px;
+
+    // Responsive: adjust position on mobile
+    @media screen and (max-width: 720px) {
+      margin-left: 34px;
+    }
   }
 
   .job_marker_inner {
@@ -348,6 +371,15 @@ $margin-top-jobs-instance: 50px;
     margin-left: -34.6%;
     text-align: right;
     float: left;
+
+    // Responsive: adjust layout on mobile
+    @media screen and (max-width: 720px) {
+      margin-left: 80px;
+      max-width: calc(100% - 100px);
+      text-align: left;
+      width: calc(100% - 30px);
+      margin-left: 30px;
+    }
   }
 
   .info_right {
@@ -356,9 +388,30 @@ $margin-top-jobs-instance: 50px;
     text-align: left;
     width: 50%;
     max-width: 600px;
+
+    // Responsive: adjust layout on mobile
+    @media screen and (max-width: 720px) {
+      margin-left: 63px;
+      margin-top: 20px;
+      width: calc(100% - 100px);
+    }
+
     .job_content_text_mobile {
       display: none;
+
+      // Show on mobile
+      @media only screen and (max-device-width: 480px) and (orientation: portrait) {
+        display: inline;
+      }
     }
+
+    .job_content_text {
+      // Hide on mobile
+      @media only screen and (max-device-width: 480px) and (orientation: portrait) {
+        display: none;
+      }
+    }
+
     .textButton {
       background:none;
       border:none;
@@ -440,37 +493,69 @@ $margin-top-jobs-instance: 50px;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+
+    // Responsive: stack on mobile
+    @media screen and (max-width: 720px) {
+      flex-direction: column;
+    }
+
+    // Mobile-specific margin adjustment
+    @media only screen and (max-device-width: 480px) and (orientation: portrait) {
+      margin-top: 100px;
+    }
   }
 
   .project_photo {
     flex: 0 0 50%;
     text-align: center;
+
+    // Responsive: full width on mobile
+    @media screen and (max-width: 720px) {
+      flex: none;
+      margin-bottom: 20px;
+      width: 100%;
+      margin: 0px;
+      padding: 0px;
+    }
   }
 
   .project_img {
     height: auto;
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
+
+    // Responsive: larger on mobile
+    @media screen and (max-width: 720px) {
+      max-width: 80%;
+    }
   }
 
   .project_text_container {
     flex: 0 0 50%;
     padding-left: 40px;
-  }
 
-  @media screen and (max-width: 720px) {
-    .project_instance {
-      flex-direction: column;
-    }
-    
-    .project_photo {
-      flex: none;
-      margin-bottom: 20px;
-    }
-    
-    .project_text_container {
+    // Responsive: full width, no padding on mobile
+    @media screen and (max-width: 720px) {
       flex: none;
       padding-left: 0;
+      width: 70%;
+      text-align: left;
+      margin: 50px 0px 0px 15%;
+    }
+  }
+
+  p {
+    // Responsive: full width on mobile
+    @media screen and (max-width: 720px) {
+      width: 100%;
+    }
+  }
+
+  .button_subtext {
+    // Responsive: constrained width on mobile
+    @media screen and (max-width: 720px) {
+      width: 80%;
+      max-width: 500px;
     }
   }
 
@@ -515,95 +600,3 @@ $margin-top-jobs-instance: 50px;
   pointer-events: none;
 }
 
-/* HALF SCREEN */
-@media screen and (max-width:720px) {
-  /* timeline half screen */
-  .timeline .downwards_curved_triangle {
-    margin-left: -30px;
-  }
-  .timeline .timeline_vert_line {
-    margin-left: 43px;
-  }
-  .timeline .info_left {
-    margin-left: 80px;
-    max-width: calc(100% - 100px);
-    text-align: left;
-  }
-  .timeline .job_marker_outer {
-    margin-left: 34px;
-  }
-  .timeline .info_left {
-    width: calc(100% - 30px);
-    margin-left: 30px;
-  }
-  .timeline .info_right {
-    margin-left: 63px;
-    margin-top: 20px;
-    width: calc(100% - 100px);
-  }
-  /** timeline half screen end **/
-  /* project highlights half screen */
-  .project_highlights .project_instance {
-    display: block;
-    width: 100%;
-  }
-
-  .project_highlights .project_photo {
-    text-align: center;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-  }
-
-  .project_highlights .project_text_container {
-    width: 70%;
-    height: auto;
-    text-align: left;
-    margin: 50px 0px 0px 15%;
-  }
-
-  .project_highlights p {
-    width: 100%;
-  }
-
-  .project_highlights .project_img {
-    max-width: 80%;
-  }
-
-  .project_highlights .button_subtext {
-    width: 80%;
-    max-width: 500px;
-  }
-  /** project highlights half screen end **/
-}
-
-
-/* MOBILE */
-@media only screen and (max-device-width: 480px) and (orientation: portrait) {
-  /* top container mobile */
-  .top-container .intro-container-right {
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 0px;
-    min-width: 330px;
-  }
-  /** top container mobile end **/
-
-  /* job section mobile */
-
-  .timeline .info_right .job_content_text {
-    display: none;
-  }
-
-  .timeline .info_right .job_content_text_mobile {
-    display: inline;
-  }
-
-  /** job section mobile end **/
-
-  /* project highlights mobile */
-  .project_highlights .project_instance {
-    margin-top: 100px;
-  }
-  /** project highlights mobile end **/
-}
