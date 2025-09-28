@@ -1,0 +1,169 @@
+/* Timeline Component */
+$margin-top-jobs-container: 100px;
+$margin-top-jobs-instance: 50px;
+
+.timeline {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100px;
+  margin-bottom: 150px;
+
+  h1 {
+    font-family: $h1-font-family;
+    letter-spacing: $h1-letter-spacing;
+    font-size: $h1-font-size;
+    color: $h1-color;
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    font-family: $base-font-family;
+    font-style: italic;
+    color: $base-font-color;
+    line-height: 25px;
+    margin-top: 10px;
+  }
+
+  .blue_text {
+    color:$link-color;
+  }
+
+  .downwards_curved_triangle {
+    line-height: 9px;
+    margin-left: calc(34.6% - 73px);
+    opacity: 0.5;
+    -webkit-transition: -webkit-transform 0.5s ease-out, opacity 1s ease-out;
+    transition:                 transform 0.5s ease-out, opacity 1s ease-out;
+
+    // Responsive: adjust position on mobile
+    @media screen and (max-width: 720px) {
+      margin-left: -30px;
+    }
+  }
+
+  .down_arrow_anim {
+    opacity: 1;
+  }
+
+  .timeline_vert_line {
+    position: absolute;
+    width: 2px;
+    height: $margin-top-jobs-container;
+    background: #0E2736;
+    margin-left: calc(34.6% - 1px);
+    margin-top: -1px;
+    z-index: -1;
+
+    // Responsive: adjust position on mobile
+    @media screen and (max-width: 720px) {
+      margin-left: 43px;
+    }
+  }
+
+  .job_instance .timeline_vert_line {
+    height: calc(100% + #{$margin-top-jobs-instance});
+    top: 0;
+  }
+
+  .last_job .timeline_vert_line {
+    height: 10px;
+  }
+
+  .jobs_container {
+    margin-top: $margin-top-jobs-container;
+  }
+
+  .job_instance {
+    margin-top: $margin-top-jobs-instance;
+    position: relative;
+  }
+
+  .job_marker_outer {
+    background-color: white;
+    float: left;
+    margin-left: calc(34.6% - 10px);
+    margin-top: 3px;
+    width: 20px; height: 20px;
+
+    // Responsive: adjust position on mobile
+    @media screen and (max-width: 720px) {
+      margin-left: 34px;
+    }
+  }
+
+  .job_marker_inner {
+    border: 3px solid $link-color;
+    margin: 2px;
+    width: 16px; height: 16px;
+    border-radius: 10px;
+  }
+
+  .job_content {
+    margin-left: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .info_left {
+    position: relative;
+    width: calc(34.6% - 73px);
+    margin-left: -34.6%;
+    text-align: right;
+    float: left;
+
+    // Responsive: adjust layout on mobile
+    @media screen and (max-width: 720px) {
+      margin-left: 80px;
+      max-width: calc(100% - 100px);
+      text-align: left;
+      width: calc(100% - 30px);
+      margin-left: 30px;
+    }
+  }
+
+  .info_right {
+    float: left;
+    margin-left: 60px;
+    text-align: left;
+    width: 50%;
+    max-width: 600px;
+
+    // Responsive: adjust layout on mobile
+    @media screen and (max-width: 720px) {
+      margin-left: 63px;
+      margin-top: 20px;
+      width: calc(100% - 100px);
+    }
+
+    .job_content_text_mobile {
+      display: none;
+
+      // Show on mobile
+      @media only screen and (max-device-width: 480px) and (orientation: portrait) {
+        display: inline;
+      }
+    }
+
+    .job_content_text {
+      // Hide on mobile
+      @media only screen and (max-device-width: 480px) and (orientation: portrait) {
+        display: none;
+      }
+    }
+
+    .textButton {
+      background:none;
+      border:none;
+      margin:0;
+      padding:0;
+      color: $link-color;
+      font-family: $base-font-family;
+      font-size: 15px;
+      &:hover {
+        color: $link-color-hover;
+        text-decoration: none;
+      }
+    }
+  }
+}
