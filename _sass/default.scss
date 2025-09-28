@@ -37,6 +37,18 @@ $square-link-font-style: normal;
 $square-link-background: #fff;
 $square-link-color: #222;
 
+/* Modern CSS reset - minimal and future-proof */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  line-height: 1;
+}
+
 /* standards */
 
 body {
@@ -253,6 +265,8 @@ $margin-top-jobs-instance: 50px;
     letter-spacing: $h1-letter-spacing;
     font-size: $h1-font-size;
     color: $h1-color;
+    margin: 0;
+    padding: 0;
   }
   p {
     font-family: $base-font-family;
