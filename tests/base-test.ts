@@ -37,16 +37,18 @@ export const test = base.extend<{
       const allMasks = [...COMMON_MASKS, ...additionalMasks];
       const maskLocators = allMasks.map(selector => page.locator(selector));
       
-      const screenshotOptions = {
-        fullPage,
+      const baseOptions = {
         animations: 'disabled' as const,
         mask: maskLocators
       };
-      
+
       if (element) {
-        await expect(element).toHaveScreenshot(name, screenshotOptions);
+        await expect(element).toHaveScreenshot(name, baseOptions);
       } else {
-        await expect(page).toHaveScreenshot(name, screenshotOptions);
+        await expect(page).toHaveScreenshot(name, {
+          ...baseOptions,
+          fullPage
+        });
       }
     };
     
