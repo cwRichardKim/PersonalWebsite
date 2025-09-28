@@ -36,8 +36,11 @@ npx playwright install
 ### Basic Commands
 
 ```bash
-# Run all screenshot tests
+# Run all screenshot tests (terminal output, perfect for agents)
 npm run test
+
+# Run tests with HTML report and open browser automatically
+npm run test:html
 
 # Run tests with UI (interactive mode)
 npm run test:ui
@@ -54,9 +57,27 @@ npm run test:clean
 # Reset everything and create fresh baselines
 npm run test:reset
 
-# View test report
+# View existing test report (opens browser)
 npm run test:report
 ```
+
+### Agent-Friendly Testing Workflow
+
+The testing system is optimized for AI coding assistants:
+
+1. **Agent checks for regressions**: `npm run test`
+   - Outputs test results to terminal
+   - Returns proper exit codes (0 = pass, 1 = fail)
+   - No hanging processes or manual intervention required
+
+2. **Manual inspection when needed**: `npm run test:html`
+   - Runs tests with HTML report
+   - Automatically opens browser with before/after comparisons
+   - Perfect for reviewing visual differences
+
+3. **View existing results**: `npm run test:report`
+   - Opens previously generated HTML report
+   - Useful when tests already ran and you want to review results
 
 ### Test Structure
 

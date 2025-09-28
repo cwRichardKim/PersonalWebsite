@@ -1,7 +1,8 @@
 {
   "scripts": {
     "generate-rss": "tsx scripts/generate-rss.ts",
-    "test": "playwright test",
+    "test": "playwright test --reporter=list",
+    "test:html": "playwright test --reporter=html",
     "test:ui": "playwright test --ui",
     "test:headed": "playwright test --headed",
     "test:update-snapshots": "playwright test --update-snapshots",
