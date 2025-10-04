@@ -1,14 +1,14 @@
 {
   "scripts": {
     "generate-rss": "tsx scripts/generate-rss.ts",
-    "test": "playwright test --reporter=list",
-    "test:html": "playwright test --reporter=html",
-    "test:ui": "playwright test --ui",
-    "test:headed": "playwright test --headed",
-    "test:update-snapshots": "playwright test --update-snapshots",
-    "test:report": "playwright show-report",
-    "test:clean": "npx rimraf tests/*-snapshots test-results playwright-report",
-    "test:reset": "npm run test:clean && npm run test:update-snapshots"
+    "pw": "playwright test --reporter=list",
+    "pw:html": "playwright test --reporter=html",
+    "pw:ui": "playwright test --ui",
+    "pw:headed": "playwright test --headed",
+    "pw:update-snapshots": "playwright test --update-snapshots",
+    "pw:report": "playwright show-report",
+    "pw:clean": "npx rimraf tests/*-snapshots test-results playwright-report",
+    "pw:reset": "npm run pw:clean && npm run pw:update-snapshots"
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",
