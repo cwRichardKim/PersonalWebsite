@@ -1,6 +1,11 @@
 {
   "scripts": {
+    "build": "npm run tw:build && bundle exec jekyll build",
+    "dev": "./scripts/dev.sh",
+    "serve": "npm run dev",
     "generate-rss": "tsx scripts/generate-rss.ts",
+    "tw:build": "tailwindcss -c tailwind.config.js -i ./tailwind/input.css -o ./assets/css/tailwind.css --minify",
+    "tw:watch": "tailwindcss -c tailwind.config.js -i ./tailwind/input.css -o ./assets/css/tailwind.css --watch=always",
     "pw": "playwright test --reporter=list",
     "pw:html": "playwright test --reporter=html",
     "pw:ui": "playwright test --ui",
@@ -15,6 +20,7 @@
     "@types/node": "^24.2.1",
     "@types/xml2js": "^0.4.14",
     "rimraf": "^6.0.1",
+    "tailwindcss": "^3.4.17",
     "tsx": "^4.20.4",
     "typescript": "^5.9.2",
     "xml2js": "^0.6.2"
